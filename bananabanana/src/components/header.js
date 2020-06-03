@@ -1,42 +1,24 @@
-import { Link } from "gatsby"
-import PropTypes from "prop-types"
-import React from "react"
+import React from "react";
+import banana from "../images/banana-logo.svg";
 
 const Header = ({ siteTitle }) => (
-  <header
-    style={{
-      background: `rebeccapurple`,
-      marginBottom: `1.45rem`,
-    }}
-  >
-    <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,
-          }}
-        >
-          {siteTitle}
-        </Link>
-      </h1>
-    </div>
+  <header>
+    <section className="banana--logo">
+      <img src={banana} alt="banana" width="200" height="89" />
+    </section>
+    <section>
+      <nav>
+        <ul>
+          <li>
+            <a href="https://www.instagram.com/bananabanana.rs/">instagram</a>
+          </li>
+          <li>
+            <a href="mailto:contact@bananabanana.rs">contact@bananabanana.rs</a>
+          </li>
+        </ul>
+      </nav>
+    </section>
   </header>
 )
-
-Header.propTypes = {
-  siteTitle: PropTypes.string,
-}
-
-Header.defaultProps = {
-  siteTitle: ``,
-}
 
 export default Header
